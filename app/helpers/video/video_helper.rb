@@ -1,0 +1,2 @@
+module Video::VideoHelper
+end

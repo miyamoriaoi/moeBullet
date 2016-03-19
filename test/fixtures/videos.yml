@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  main_type: 1
+  sub_type: 1
+  play_number: 1
+  bullet_number: 1
+  coin_number: 1
+  up_time: 2016-03-19 21:35:53
+  favorite_number: 1
+  user_id: 1
+  video_link: MyString
+  video_introduction: MyText
+
+two:
+  title: MyString
+  main_type: 1
+  sub_type: 1
+  play_number: 1
+  bullet_number: 1
+  coin_number: 1
+  up_time: 2016-03-19 21:35:53
+  favorite_number: 1
+  user_id: 1
+  video_link: MyString
+  video_introduction: MyText
