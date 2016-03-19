@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'video/index'
+
   get 'index/index'
 
   devise_for :users
