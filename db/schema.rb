@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160319133553) do
+ActiveRecord::Schema.define(version: 20160319135110) do
 
   create_table "roles", force: :cascade do |t|
     t.string   "name",          limit: 255
@@ -48,6 +48,13 @@ ActiveRecord::Schema.define(version: 20160319133553) do
   end
 
   add_index "users_roles", ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id", using: :btree
+
+  create_table "video_comments", force: :cascade do |t|
+    t.text     "comment",    limit: 65535
+    t.integer  "video_id",   limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
 
   create_table "videos", force: :cascade do |t|
     t.string   "title",              limit: 255

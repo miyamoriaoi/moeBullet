@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   get 'index/index'
-  namespace :video do
-    get '/:avid' => "video#index", as: "video_show"
-  end
+
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
