@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'video/index'
+  # 查看视频
+  get 'video/:avid', to: "video#index", avid: /av\d+/
 
   get 'index/index'
 
@@ -9,7 +10,6 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'index#index'
-
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   # Example of named route that can be invoked with purchase_url(id: product.id)
