@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160319135110) do
+ActiveRecord::Schema.define(version: 20160319160239) do
 
   create_table "roles", force: :cascade do |t|
     t.string   "name",          limit: 255
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 20160319135110) do
     t.text     "video_introduction", limit: 65535
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
+    t.integer  "permission",         limit: 4
   end
 
   add_index "videos", ["main_type"], name: "index_videos_on_main_type", using: :btree

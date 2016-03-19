@@ -21,3 +21,10 @@
 
 en:
   hello: "Hello world"
+  main_type:
+    animation: Animation
+    music: Music
+    game: Game
+    science: Science
+    otomad: Otomad
+    entertainment: Entertainment
