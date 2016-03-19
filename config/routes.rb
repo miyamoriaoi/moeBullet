@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   # 查看视频
   get 'video/:avid', to: "video#index", avid: /av\d+/
-
-  get 'index/index'
-
+  namespace :api do
+    resources :video, only:[] do
+      resources :comment
+    end
+  end
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
