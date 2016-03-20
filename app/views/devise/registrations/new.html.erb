@@ -1,4 +1,5 @@
 <div id = "sign_up">
+
   <div class="user_common">
     <h1>注册</h1>
 
@@ -6,14 +7,14 @@
     <%= devise_error_messages! %>
 
     <div class="email ui input">
-      <%= f.email_field :email, autofocus: true, placeholder: "昵称(例: 矢泽妮可)" %>
+      <%= f.email_field :email, autofocus: true, placeholder: "邮箱(例: \"nico@moe.com\")" %>
     </div>
 
-    <div class="ui input pasword">
+    <div class="ui input">
       <%= f.password_field :password, autocomplete: "off" ,placeholder: "密码(8-72位字符组成 区分大小写)"%>
     </div>
 
-    <div class="password ui input">
+    <div class="ui input">
       <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"确认密码" %>
     </div>
 
