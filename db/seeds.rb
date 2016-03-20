@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+#创建视频分类
+  VideoType.create(name: "animation")
+  VideoType.create(name: "music")
+  VideoType.create(name: "game")
+  VideoType.create(name: "science")
+  VideoType.create(name: "otomad")
+  VideoType.create(name: "entertainment")
