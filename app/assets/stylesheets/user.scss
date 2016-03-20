@@ -20,6 +20,33 @@
   a {
     float: right;
   }
+  .submit {
+    width: 100%;
+  }
+}
+
+#sign_in{
+  width: 100%;
+  text-align: center;
+  .submit {
+    width: 100%;
+  }
+  .login_button{
+    width: 49%;
+    display: inline-block;
+    padding-right: 1%;
+  }
+  .signup_button{
+    width: 49%;
+    padding-left: 1%;
+    display: inline-block;
+  }
+  #buttons {
+    width: 98%;
+    display: block;
+    position: relative;
+    left: 4%;
+  }
 }
 .user_common {
   padding-top: 20px;
@@ -29,10 +56,5 @@
   .input {
     width: 100%;
     margin: 10px;
-  }
-  .password {
-  }
-  .submit {
-    width: 100%;
   }
 }
