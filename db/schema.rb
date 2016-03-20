@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160319160239) do
+ActiveRecord::Schema.define(version: 20160320044708) do
 
   create_table "roles", force: :cascade do |t|
     t.string   "name",          limit: 255
@@ -56,10 +56,15 @@ ActiveRecord::Schema.define(version: 20160319160239) do
     t.datetime "updated_at",               null: false
   end
 
+  create_table "video_types", force: :cascade do |t|
+    t.string   "name",        limit: 255
+    t.integer  "parent_type", limit: 4
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
   create_table "videos", force: :cascade do |t|
     t.string   "title",              limit: 255
-    t.integer  "main_type",          limit: 4
-    t.integer  "sub_type",           limit: 4
     t.integer  "play_number",        limit: 4
     t.integer  "bullet_number",      limit: 4
     t.integer  "coin_number",        limit: 4
@@ -71,10 +76,9 @@ ActiveRecord::Schema.define(version: 20160319160239) do
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
     t.integer  "permission",         limit: 4
+    t.integer  "video_type",         limit: 4
   end
 
-  add_index "videos", ["main_type"], name: "index_videos_on_main_type", using: :btree
-  add_index "videos", ["sub_type"], name: "index_videos_on_sub_type", using: :btree
   add_index "videos", ["user_id"], name: "index_videos_on_user_id", using: :btree
 
 end
